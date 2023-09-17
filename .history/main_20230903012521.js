@@ -1,0 +1,22 @@
+const students = [
+    {
+        sname:'Lokie',
+        marks:20
+    },
+    {
+        sname:'Komal',
+        marks:20
+    },
+    {
+        sname:'Yuvraj',
+        marks:20
+    },
+    {
+        sname:'Mahika',
+        marks:20
+    },
+    {
+        sname:'',
+        marks:20
+    }
+]

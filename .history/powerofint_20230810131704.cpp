@@ -1,0 +1,1 @@
+__BOOL_WIDTH__

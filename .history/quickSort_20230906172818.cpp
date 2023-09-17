@@ -1,0 +1,77 @@
+#include <iostream>
+
+struct Result {
+    int output1[100];
+};
+
+struct Result altTab(int input1, int input2, int input3[]) {
+    // Handle the error case where input1 is greater than 100
+    if (input1 > 100) {
+        throw "error";
+    }
+
+    for (int i = 0; i < input2; i++) {
+        // Simulate pressing the 'Tab' key
+        int mostRecentApp = input3[0];
+        for (int j = 0; j < input1 - 1; j++) {
+            input3[j] = input3[j + 1];
+        }
+        input3[input1 - 1] = mostRecentApp;
+    }
+
+    struct Result result;
+    for (int i = 0; i < input1; i++) {
+        result.output1[i] = input3[i];
+    }
+
+    return result;
+}
+
+int main() {
+    int input1, input2;
+    int input3[100];
+
+    // Test Case 1
+    input1 = 4;
+    input2 = 3;
+    int testCase1[] = {1, 2, 3, 4};
+    std::copy(testCase1, testCase1 + input1, input3);
+
+    try {
+        Result result1 = altTab(input1, input2, input3);
+
+        std::cout << "Test Case 1 Output: {";
+        for (int i = 0; i < input1; i++) {
+            std::cout << result1.output1[i];
+            if (i < input1 - 1) {
+                std::cout << ", ";
+            }
+        }
+        std::cout << "}" << std::endl;
+    } catch (const char* error) {
+        std::cerr << "Error: " << error << std::endl;
+    }
+
+    // Test Case 2
+    input1 = 10;
+    input2 = 7;
+    int testCase2[] = {4, 1, 3, 7, 6, 8, 5, 2, 10, 9};
+    std::copy(testCase2, testCase2 + input1, input3);
+
+    try {
+        Result result2 = altTab(input1, input2, input3);
+
+        std::cout << "Test Case 2 Output: {";
+        for (int i = 0; i < input1; i++) {
+            std::cout << result2.output1[i];
+            if (i < input1 - 1) {
+                std::cout << ", ";
+            }
+        }
+        std::cout << "}" << std::endl;
+    } catch (const char* error) {
+        std::cerr << "Error: " << error << std::endl;
+    }
+
+    return 0;
+}

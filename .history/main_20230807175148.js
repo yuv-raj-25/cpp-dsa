@@ -1,0 +1,3 @@
+asyn function fn(){
+    
+}
