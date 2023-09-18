@@ -6,7 +6,7 @@ int main(){
     int a = num;
     a++;
 
-    cout<<num<<endl;
+    cout<<num<<a<<endl;
 
     cout<<"the address of the num is->"<<&num<<endl;
 

@@ -3,9 +3,6 @@ using namespace std;
 
 int main(){
     int num = 5;
-    int a = num;
-    a++;
-
     cout<<num<<endl;
 
     cout<<"the address of the num is->"<<&num<<endl;
@@ -13,8 +10,7 @@ int main(){
 
     int *ptr = &num;
 
-    cout<< ++(*ptr) <<endl;
-    cout<< ptr <<endl;
+    cout<<*
 
     return 0;
 }
