@@ -32,24 +32,10 @@ int main()
     // cout << sizeof(*ptr) << endl;
     // cout << sizeof(&ptr) << endl;
 
-    // int a = 5;
-    // int *p = &a;
-
-
-    // print(p);
-
-
-    int a  = 5;
+    int a = 5;
     int *p = &a;
-    int **ptr = &p;
 
-    cout<<a<<endl;
-    cout<<*p<<endl;
-    cout<<**ptr<<endl;
-    cout<<p<<endl;
-    cout<<ptr<<endl;
-    cout<<*ptr<<endl;
 
-    
+    print(p);
     return 0;
 }

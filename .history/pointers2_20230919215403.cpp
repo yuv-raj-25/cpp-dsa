@@ -49,7 +49,5 @@ int main()
     cout<<p<<endl;
     cout<<ptr<<endl;
     cout<<*ptr<<endl;
-
-    
     return 0;
 }
